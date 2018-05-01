@@ -114,7 +114,7 @@ public class myClass {
      * @param node 
      */  
     public void preOrderTraversalbyLoop(Node node){  
-        Stack<Node> stack = new Stack();  
+        Stack<Node> stack = new Stack<Node>();  
         Node p = node;  
         while(p!=null || !stack.isEmpty()){  
             while(p!=null){ //当p不为空时，就读取p的值，并不断更新p为其左子节点，即不断读取左子节点  
@@ -133,7 +133,7 @@ public class myClass {
      * @param node 
      */  
     public void inOrderTraversalbyLoop(Node node){  
-        Stack<Node> stack = new Stack();  
+        Stack<Node> stack = new Stack<Node>();  
         Node p = node;  
         while(p!=null || !stack.isEmpty()){  
             while(p!=null){  

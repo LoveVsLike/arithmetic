@@ -6,8 +6,6 @@ public class RBTree<T extends Comparable<T>> {
 	private final RBTreeNode<T> root;
 	private AtomicLong size = new AtomicLong(0);
 	
-	private volatile boolean overideMode = true;
-
 	public RBTree() {
 		root = new RBTreeNode<T>();
 	}
