@@ -9,7 +9,6 @@ public class TrieTreeTest {
 		TrieTree tree = new TrieTree();
 		tree.insert("aaaa");
 		tree.insert("cdfc");
-		TrieNode node = tree.root;
 	}
 
 }
