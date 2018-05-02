@@ -1,4 +1,4 @@
-package com.dream.arithmetic.temp;
+package com.dream.arithmetic.tree;
 
 /**
  * avl树节点类
@@ -6,28 +6,28 @@ package com.dream.arithmetic.temp;
  * @author dream
  *
  */
-public class AVLTreeNode<T extends Comparable<T>> {
+public class AVLNode<T extends Comparable<T>> {
 	public T data;
 	public int high;
-	public AVLTreeNode<T> left;
-	public AVLTreeNode<T> right;
+	public AVLNode<T> left;
+	public AVLNode<T> right;
 
-	public AVLTreeNode() {
+	public AVLNode() {
 		
 	}
 	
-	public AVLTreeNode(T data) {
+	public AVLNode(T data) {
 		this.data = data;
 		this.high = 0;
 	}
 
-	public AVLTreeNode(T data, AVLTreeNode<T> left, AVLTreeNode<T> right) {
+	public AVLNode(T data, AVLNode<T> left, AVLNode<T> right) {
 		this.data = data;
 		this.left = left;
 		this.right = right;
 	}
 
-	public AVLTreeNode(T data, int high, AVLTreeNode<T> left, AVLTreeNode<T> right) {
+	public AVLNode(T data, int high, AVLNode<T> left, AVLNode<T> right) {
 		super();
 		this.data = data;
 		this.high = high;
@@ -51,19 +51,19 @@ public class AVLTreeNode<T extends Comparable<T>> {
 		this.high = high;
 	}
 
-	public AVLTreeNode<T> getLeft() {
+	public AVLNode<T> getLeft() {
 		return left;
 	}
 
-	public void setLeft(AVLTreeNode<T> left) {
+	public void setLeft(AVLNode<T> left) {
 		this.left = left;
 	}
 
-	public AVLTreeNode<T> getRight() {
+	public AVLNode<T> getRight() {
 		return right;
 	}
 
-	public void setRight(AVLTreeNode<T> right) {
+	public void setRight(AVLNode<T> right) {
 		this.right = right;
 	}
 

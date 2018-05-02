@@ -1,9 +1,9 @@
-package com.dream.arithmetic.temp;
+package com.dream.arithmetic.tree;
 
 public class AVLTree<T extends Comparable<T>> {
-	private AVLTreeNode<T> root;
+	private AVLNode<T> root;
 	
-	public AVLTree(AVLTreeNode<T> root) {
+	public AVLTree(AVLNode<T> root) {
 		this.root = root;
 	}
 	
@@ -11,13 +11,13 @@ public class AVLTree<T extends Comparable<T>> {
 		this.root = insert(root,data);
 	}
 	
-	private int height(AVLTreeNode<T> node) {
+	private int height(AVLNode<T> node) {
 		return node != null ? node.high : 0; 
 	}
 	
-	private AVLTreeNode<T> insert(AVLTreeNode<T> node,T data) {
+	private AVLNode<T> insert(AVLNode<T> node,T data) {
 		if(node == null) {
-			node = new AVLTreeNode<T>(data);
+			node = new AVLNode<T>(data);
 		}
 		
 		int compare = data.compareTo(node.getData());
@@ -46,8 +46,8 @@ public class AVLTree<T extends Comparable<T>> {
 		return node;
 	}
 	
-	private AVLTreeNode<T> reverseLeft(AVLTreeNode<T> node) {
-		AVLTreeNode<T> w = node.left;
+	private AVLNode<T> reverseLeft(AVLNode<T> node) {
+		AVLNode<T> w = node.left;
 		node.left = w.right;
 		w.right = node;
 		node.high = node.high-1;
@@ -56,8 +56,8 @@ public class AVLTree<T extends Comparable<T>> {
 		return w;
 	}
 	
-	private AVLTreeNode<T> reverseRight(AVLTreeNode<T> node){
-		AVLTreeNode<T> x = node.right;
+	private AVLNode<T> reverseRight(AVLNode<T> node){
+		AVLNode<T> x = node.right;
 		node.right = x.left;
 		node.high = x.high;
 		x.high = x.high + 1;
@@ -65,18 +65,14 @@ public class AVLTree<T extends Comparable<T>> {
 		return x;
 	}
 	
-	private AVLTreeNode<T> reverseDoubleLeft(AVLTreeNode<T> node){
+	private AVLNode<T> reverseDoubleLeft(AVLNode<T> node){
 		node.left = reverseRight(node.left);
 		return reverseLeft(node);
 	}
 	
-	private AVLTreeNode<T> reverseDoubleRight(AVLTreeNode<T> node){
+	private AVLNode<T> reverseDoubleRight(AVLNode<T> node){
 		node.left = reverseLeft(node.left);
 		return reverseRight(node);
-	}
-	
-	public static void main(String[] args) {
-		
 	}
 
 }
