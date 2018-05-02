@@ -49,6 +49,6 @@ public class BoyerMoore {
             }
             if (skip == 0) return true;    // found
         }
-        return false;                       // not found
+        return false;                      // not found
     }
 }
