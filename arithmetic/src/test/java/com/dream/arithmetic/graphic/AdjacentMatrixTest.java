@@ -9,6 +9,7 @@ public class AdjacentMatrixTest {
 		int n=8;//分别代表结点个数和边的数目
         String labels[]={"1","2","3","4","5","6","7","8"};//结点的标识
         AdjacentMatrix<String> graph=new AdjacentMatrix<String>(n);
+        
         for(String label:labels) {
             graph.insertVertex(label);//插入结点
         }
