@@ -12,6 +12,7 @@ public class AdjacentMatrixTest {
         for(String label:labels) {
             graph.insertVertex(label);//插入结点
         }
+        
         //插入九条边
         graph.insertEdge(0, 1, 1);
         graph.insertEdge(0, 2, 1);
