@@ -81,7 +81,7 @@ public class AVLTree<T extends Comparable<T>> {
 
 	public void remove(T data) {
 		if (data == null) {
-			throw new RuntimeException("data can\'t not be null ");
+			return;
 		}
 		this.root = remove(root, data);
 	}
