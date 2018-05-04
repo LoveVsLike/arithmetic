@@ -135,7 +135,7 @@ public class AVLTree<T extends Comparable<T>> {
 		return findMin(right.right);
 	}
 	
-	private AVLNode<T> remove1(AVLNode<T> tree, T data) {
+	public AVLNode<T> remove1(AVLNode<T> tree, T data) {
 	    if (tree==null)
 	        return null;
 	    int cmp = data.compareTo(tree.data);
