@@ -53,9 +53,5 @@ public class RedBlackTree {
 	    x.right = y;
 	    y.parent = x;
 	}
-	
-	
-	
-	
 
 }
